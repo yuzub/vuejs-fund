@@ -2,7 +2,8 @@
   <header>
     <div class="container clear">
       <div class="logo"><img :src="logoIcon"></div>
-      <div class="nav"><img :src="menuIcon"></div>
+      <div class="nav"><img :src="menuIcon" @click="showSidepanel = true"></div>
+      <md-drawer class="md-right side-drawer" :md-active.sync="showSidepanel"></md-drawer>
     </div>
   </header>
 </template>
@@ -16,6 +17,7 @@ export default {
     return {
       logoIcon: Logo,
       menuIcon: Menu,
+      showSidepanel: false,
     };
   },
 

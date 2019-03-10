@@ -2,8 +2,10 @@
   <div>
     <comp-header/>
     <div>
-      content
+      <comp-featured/>
+      <comp-call-us/>
     </div>
+    <comp-news-letter/>
     <comp-footer/>
   </div>
 </template>
@@ -19,6 +21,9 @@
 // import HelloWorld from './components/HelloWorld.vue';
 import compHeader from './components/header-footer/Header.vue';
 import compFooter from './components/header-footer/Footer.vue';
+import compFeatured from './components/featured/index.vue';
+import compCallUs from './components/call-us/index.vue';
+import compNewsLetter from './components/news-letter/index.vue';
 
 export default {
 //   name: 'app',
@@ -26,6 +31,9 @@ export default {
     // HelloWorld,
     compHeader,
     compFooter,
+    compFeatured,
+    compCallUs,
+    compNewsLetter,
   },
 };
 </script>
