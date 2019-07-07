@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import HomePage from "./components/HomePage.vue";
+import HomePage from './home/HomePage.vue';
 
 export default {
-  name: "app",
+  name: 'app',
   components: {
-    HomePage
-  }
+    HomePage,
+  },
 };
 </script>
 
@@ -39,7 +39,8 @@ main {
   margin: 0 auto;
   padding: 30px;
   background-color: white;
-  width: 1024px;
+  /* width: 1024px; */
+  width: 700px;
   min-height: 300px;
 }
 header {
@@ -60,5 +61,33 @@ ul {
 .logo {
   vertical-align: middle;
   height: 30px;
+}
+.before-enter {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  /* transition: 2s all cubic-bezier(0.39, 0.575, 0.565, 1); */
+}
+.enter {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 2s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.bg-grey {
+  background-color: grey;
+}
+.bg-lightgrey {
+  background-color: lightgray;
+}
+.bg-blue {
+  background-color: blue;
+}
+.bg-lighblue {
+  background-color: lightblue;
+}
+.bg-skyblue {
+  background-color: skyblue;
+}
+.bg-lightskyblue {
+  background-color: lightskyblue;
 }
 </style>
